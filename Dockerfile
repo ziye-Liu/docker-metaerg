@@ -5,8 +5,9 @@ LABEL version="1.2.2"
 WORKDIR /NGStools/
 
 #Install compiler and perl stuff
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN apt-get update && apt-get install -y \
-    apt-utils \
+    #apt-utils \
     autoconf \
     #build-essential \
     cpanminus \
